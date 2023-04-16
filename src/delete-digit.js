@@ -12,11 +12,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function deleteDigit(n) {
-  const number = String(n);
+  const number = n.toString();
   const allPossibleNumbers = [];
-  
+
   for (let digit of number) {
-    allPossibleNumbers.push(+number.replace(digit, ''))
+    allPossibleNumbers.push(+number.replace(digit, ''));
   }
 
   return Math.max(...allPossibleNumbers);
